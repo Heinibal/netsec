@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
             break;
         case  0:
             printf("child PID: %i\n", getpid());   /* Hier befinden Sie sich im Kindprozess   */
-            char* args[] = {"+%%A", (char*)0};
+            char* args[] = {"date", "+%A", (char*)0};
             char* env[] = {"LC_ALL=de_DE.utf8", (char*)0};
             execve("/bin/date", args, env);
             break;
